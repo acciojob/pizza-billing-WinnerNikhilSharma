@@ -19,6 +19,7 @@ public class Pizza {
         this.isToppingAdded=false;
         this.isCheeseAdded=false;
         this.isTakeAwayAdded=false;
+        this.extraCheesePrice = 80;
 
         this.takeAwayPrice = 20;
 
@@ -41,10 +42,11 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
 
-        if(isCheeseAdded == false)
-        this.price += this.extraCheesePrice;
+        if(!isCheeseAdded){
+            this.price += this.extraCheesePrice;
 
         isCheeseAdded = true;
+        }
     }
 
     public void addExtraToppings(){
@@ -59,7 +61,7 @@ public class Pizza {
         // your code goes here
         if(isTakeAwayAdded==false){
             this.price += this.takeAwayPrice;
-            this.isTakeAwayAdded=true;
+            isTakeAwayAdded=true;
         }
     }
 
